@@ -105,13 +105,15 @@ function App() {
           <div className="btn-container">
             <button
               className="btn btn-color-2"
-              onclick="window.open('./assets/AldairBroncanoSotelo.pdf')"
+              onClick={() => window.open("./images/AldairBroncanoSotelo.pdf")}
             >
               Download CV
             </button>
             <button
               className="btn btn-color-1"
-              onclick="location.href='mailto:aldairbroncanosotelo@gmail.com'"
+              onClick={() =>
+                window.open("mailto:aldairbroncanosotelo@gmail.com")
+              }
             >
               Contact Info
             </button>
@@ -121,13 +123,20 @@ function App() {
               src="./images/linkedin.png"
               alt="My LinkedIn profile"
               className="icon"
-              onclick="window.open('https://www.linkedin.com/in/aldair-broncano-98327221b')"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/aldair-broncano-98327221b",
+                  "_blank"
+                )
+              }
             />
             <img
               src="./images/github.png"
               alt="My Github profile"
               className="icon"
-              onclick="window.open('https://github.com/AldairBroncano')"
+              onClick={() =>
+                window.open("https://github.com/AldairBroncano", "_blank")
+              }
             />
           </div>
         </div>
@@ -255,7 +264,7 @@ function App() {
             </div>
 
             <div className="details-container">
-              <h2 className="experience-sub-title">Frontend Development</h2>
+              <h2 className="experience-sub-title">Backend Development</h2>
               <div className="article-container">
                 <article>
                   <img
