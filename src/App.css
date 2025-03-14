@@ -21,7 +21,7 @@ body {
 
 /* Tema oscuro */
 [data-theme="dark"] {
-  background-color: #121212;
+  background-color: #23272f;
   color: white;
 }
 
@@ -42,11 +42,19 @@ body {
 }
 
 [data-theme="light"] .experience-sub-title {
-  color: rgb(88, 88, 88);
+  color: rgb(59, 59, 59);
 }
 
 [data-theme="dark"] .experience-sub-title {
-  color: rgb(185, 185, 185);
+  color: rgb(216, 216, 216);
+}
+
+[data-theme="light"] p {
+  color: rgb(77, 77, 77);
+}
+
+[data-theme="dark"] p {
+  color: rgb(189, 189, 189);
 }
 
 .tema {
@@ -235,6 +243,7 @@ section {
 
 .section__text p {
   font-weight: 600;
+  margin: 0.5rem 0;
 }
 
 .section__text__p1 {
@@ -273,12 +282,28 @@ section {
   gap: 1rem;
 }
 
+/*
 .btn {
-  font-weight: 600;
+  font-weight: 500;
   transition: all 300ms ease;
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+}
+
+*/
+
+.btn {
+  font-weight: 550;
+  transition: all 300ms ease;
+  padding: 0.9rem 1rem; /* Reduce el padding */
+  width: 8rem; /* Permite que se ajuste al contenido */
+  border-radius: 2rem;
+  font-size: 0.8rem; /* Asegura que el tamaño de la fuente sea el mismo */
+}
+
+.btn-color-1 {
+  color: white !important;
 }
 
 .btn-color-1,
@@ -307,6 +332,7 @@ section {
 
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
+  color: white;
 }
 
 .btn-container {
