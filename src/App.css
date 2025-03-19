@@ -62,9 +62,12 @@ body {
   border: none;
 }
 
+/*
 .tema:hover {
   transform: scale(1.2);
 }
+
+*/
 
 button:hover {
   background-color: #6e6e6e;

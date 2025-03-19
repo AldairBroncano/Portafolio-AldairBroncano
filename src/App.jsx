@@ -1,6 +1,8 @@
 import "./App.css";
 import "./mediaqueries.css";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function App() {
   const toggleMenu = () => {
@@ -29,8 +31,26 @@ function App() {
   }, [theme]);
 
   //****** */
+
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="container">
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="container"
+    >
       <nav id="desktop-nav">
         <div className="logo">Aldair Broncano</div>
         <div>
@@ -47,9 +67,15 @@ function App() {
             <li>
               <a href="#contact">Contact</a>
             </li>
-            <li className="tema" onClick={toggleTheme}>
+            <motion.li
+              className="tema"
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+            >
               {theme === "light" ? "🌙" : "☀️"}
-            </li>
+            </motion.li>
           </ul>
         </div>
       </nav>
@@ -99,8 +125,10 @@ function App() {
         </div>
         <div className="section__text">
           <p className="section__text__p1">Hello, I'm</p>
+
           <h1 className="title">Aldair Broncano</h1>
-          <p className="section__text__p1">Backend Developer</p>
+
+          <p className="section__text__p1">Java Developer</p>
 
           <div className="btn-container">
             <button
@@ -119,7 +147,7 @@ function App() {
             </button>
           </div>
           <div id="socials-container">
-            <img
+            <motion.img
               src="./images/linkedin.png"
               alt="My LinkedIn profile"
               className="icon"
@@ -129,15 +157,21 @@ function App() {
                   "_blank"
                 )
               }
-            />
-            <img
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.4 }}
+              transition={{ duration: 0.4 }}
+            ></motion.img>
+            <motion.img
               src="./images/github.png"
               alt="My Github profile"
               className="icon"
               onClick={() =>
                 window.open("https://github.com/AldairBroncano", "_blank")
               }
-            />
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.4 }}
+              transition={{ duration: 0.4 }}
+            ></motion.img>
           </div>
         </div>
       </section>
@@ -338,7 +372,13 @@ function App() {
         <h1 className="title">Projects</h1>
         <div className="experience-details-container">
           <div className="about-containers">
-            <div className="details-container color-container">
+            <motion.div
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.4 }}
+              transition={{ duration: 0.4 }}
+              className="details-container color-container"
+            >
               <div className="article-container">
                 <img
                   src="./images/project-1.png"
@@ -352,7 +392,9 @@ function App() {
               <div className="btn-container">
                 <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
+                  onClick={() =>
+                    window.open("https://github.com/AldairBroncano", "_blank")
+                  }
                 >
                   Github
                 </button>
@@ -363,8 +405,15 @@ function App() {
                   Live Demo
                 </button>
               </div>
-            </div>
-            <div className="details-container color-container">
+            </motion.div>
+
+            <motion.div
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.4 }}
+              transition={{ duration: 0.4 }}
+              className="details-container color-container"
+            >
               <div className="article-container">
                 <img
                   src="./images/project-2.png"
@@ -389,8 +438,14 @@ function App() {
                   Live Demo
                 </button>
               </div>
-            </div>
-            <div className="details-container color-container">
+            </motion.div>
+            <motion.div
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.4 }}
+              transition={{ duration: 0.4 }}
+              className="details-container color-container"
+            >
               <div className="article-container">
                 <img
                   src="./images/project-3.png"
@@ -415,7 +470,7 @@ function App() {
                   Live Demo
                 </button>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         <img
@@ -478,7 +533,7 @@ function App() {
         <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
       </footer>
       <script src="script.js"></script>
-    </div>
+    </motion.div>
   );
 }
 
