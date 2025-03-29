@@ -387,20 +387,28 @@ function App() {
                 />
               </div>
               <h2 className="experience-sub-title project-title">
-                Project One
+                Biblioteca Virtual
               </h2>
               <div className="btn-container">
                 <button
                   className="btn btn-color-2 project-btn"
                   onClick={() =>
-                    window.open("https://github.com/AldairBroncano", "_blank")
+                    window.open(
+                      "https://github.com/AldairBroncano/proyecto_app_web",
+                      "_blank"
+                    )
                   }
                 >
                   Github
                 </button>
                 <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/AldairBroncano/proyecto_app_web",
+                      "_blank"
+                    )
+                  }
                 >
                   Live Demo
                 </button>
@@ -416,7 +424,7 @@ function App() {
             >
               <div className="article-container">
                 <img
-                  src="./images/project-2.png"
+                  src="./images/project-2.jpeg"
                   alt="Project 2"
                   className="project-img"
                 />
