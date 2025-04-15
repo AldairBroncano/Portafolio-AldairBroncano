@@ -198,7 +198,7 @@ function App() {
                 <h3>Experience</h3>
                 <p>
                   Freelancer 1+ years <br />
-                  Backend Development
+                  java and Spring boot
                 </p>
               </div>
 
@@ -215,11 +215,10 @@ function App() {
 
             <div className="text-container">
               <p>
-                Hi everyone, I'm Aldair Broncano from Lima, Peru. A student in
-                the final cycles of Computer Science and Informatics at the
-                Higher Institute of Technology, Cibertec (Peru). Currently, I'm
-                strengthening my skills in Full Stack development with Java and
-                other technologies.
+                Advanced student of Computer Science and Information Technology
+                at Instituto Superior Tecnológico Cibertec. Currently
+                strengthening my skills in full stack development with Java and
+                other modern technologies.
               </p>
             </div>
           </div>
@@ -430,18 +429,28 @@ function App() {
                 />
               </div>
               <h2 className="experience-sub-title project-title">
-                Project Two
+                Mundo anime
               </h2>
               <div className="btn-container">
                 <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/AldairBroncano/Proyecto---Mundo-Anime",
+                      "_blank"
+                    )
+                  }
                 >
                   Github
                 </button>
                 <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/AldairBroncano/Proyecto---Mundo-Anime",
+                      "_blank"
+                    )
+                  }
                 >
                   Live Demo
                 </button>
@@ -462,18 +471,28 @@ function App() {
                 />
               </div>
               <h2 className="experience-sub-title project-title">
-                Project Three
+                Tienda Abarrotes
               </h2>
               <div className="btn-container">
                 <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/AldairBroncano/PROYECTO_SER_WEB",
+                      "_blank"
+                    )
+                  }
                 >
                   Github
                 </button>
                 <button
                   className="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/AldairBroncano/PROYECTO_SER_WEB",
+                      "_blank"
+                    )
+                  }
                 >
                   Live Demo
                 </button>
@@ -538,7 +557,7 @@ function App() {
             </ul>
           </div>
         </nav>
-        <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+        <p>Copyright &#169; 2025 Aldair Broncano. All Rights Reserved.</p>
       </footer>
       <script src="script.js"></script>
     </motion.div>
