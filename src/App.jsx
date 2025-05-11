@@ -372,7 +372,6 @@ function App() {
         <div className="experience-details-container">
           <div className="about-containers">
             <motion.div
-              onClick={toggleTheme}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.4 }}
               transition={{ duration: 0.4 }}
@@ -415,7 +414,6 @@ function App() {
             </motion.div>
 
             <motion.div
-              onClick={toggleTheme}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.4 }}
               transition={{ duration: 0.4 }}
@@ -457,7 +455,6 @@ function App() {
               </div>
             </motion.div>
             <motion.div
-              onClick={toggleTheme}
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.4 }}
               transition={{ duration: 0.4 }}
