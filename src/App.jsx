@@ -379,6 +379,43 @@ function App() {
             >
               <div className="article-container">
                 <img
+                  src="./images/project-4.jpeg"
+                  alt="Project 2"
+                  className="project-img"
+                />
+              </div>
+              <h2 className="experience-sub-title project-title">DevVerse</h2>
+              <div className="btn-container">
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/AldairBroncano/DevVerse",
+                      "_blank"
+                    )
+                  }
+                >
+                  Github
+                </button>
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() =>
+                    window.open("https://deversee.netlify.app/", "_blank")
+                  }
+                >
+                  Live Demo
+                </button>
+              </div>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.4 }}
+              transition={{ duration: 0.4 }}
+              className="details-container color-container"
+            >
+              <div className="article-container">
+                <img
                   src="./images/project-1.png"
                   alt="Project 1"
                   className="project-img"
