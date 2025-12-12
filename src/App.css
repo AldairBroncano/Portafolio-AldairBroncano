@@ -437,24 +437,73 @@ article .icon {
 
 #projects {
   position: relative;
+  padding: 4rem 2rem;
+}
+
+.about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.details-container {
+  flex: 1 1 200px;
+  max-width: 500px;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
+  border: 1px solid rgb(163, 163, 163);
+  background-color: transparent;
+  width: 100%; /* o por ejemplo 350px si estás fijo en card size */
+  max-width: 400px;
+}
+
+.details-container:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.article-container {
+  width: 100%;
+  overflow: hidden;
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 
 .project-title {
-  margin: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .project-btn {
-  border-color: rgb(163, 163, 163);
+  flex: 1 1 auto;
+  min-width: 100px;
+  max-width: 120px;
+  text-align: center;
+}
+
+.project-btn:hover {
+  background-color: rgb(61, 61, 61);
+  color: white;
 }
 
 /* CONTACT */
