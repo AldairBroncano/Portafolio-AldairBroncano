@@ -209,13 +209,13 @@ function App() {
                   className="icon"
                 />
                 <h3>Education</h3>
-                <p>Computer and Informatics student</p>
+                <p>Computer and Informatics Graduate</p>
               </div>
             </div>
 
             <div className="text-container">
               <p>
-                Advanced student of Computer Science and Information Technology
+                Advanced graduate of Computer Science and Information Technology
                 at Instituto Superior Tecnológico Cibertec. Currently
                 strengthening my skills in full stack development with Java and
                 other modern technologies.
