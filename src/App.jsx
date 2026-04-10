@@ -154,7 +154,7 @@ function App() {
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/in/aldair-broncano-98327221b",
-                  "_blank"
+                  "_blank",
                 )
               }
               whileHover={{ scale: 1.04 }}
@@ -384,14 +384,16 @@ function App() {
                   className="project-img"
                 />
               </div>
-              <h2 className="experience-sub-title project-title">DevVerse</h2>
+              <h2 className="experience-sub-title project-title">
+                Develoverse
+              </h2>
               <div className="btn-container">
                 <button
                   className="btn btn-color-2 project-btn"
                   onClick={() =>
                     window.open(
                       "https://github.com/AldairBroncano/DevVerse",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -400,7 +402,7 @@ function App() {
                 <button
                   className="btn btn-color-2 project-btn"
                   onClick={() =>
-                    window.open("https://deversee.netlify.app/", "_blank")
+                    window.open("https://develoverse.netlify.app/", "_blank")
                   }
                 >
                   Live Demo
@@ -430,7 +432,7 @@ function App() {
                   onClick={() =>
                     window.open(
                       "https://github.com/AldairBroncano/proyecto_app_web",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -441,7 +443,7 @@ function App() {
                   onClick={() =>
                     window.open(
                       "https://github.com/AldairBroncano/proyecto_app_web",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -472,7 +474,7 @@ function App() {
                   onClick={() =>
                     window.open(
                       "https://github.com/AldairBroncano/Proyecto---Mundo-Anime",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -483,7 +485,7 @@ function App() {
                   onClick={() =>
                     window.open(
                       "https://github.com/AldairBroncano/Proyecto---Mundo-Anime",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -513,7 +515,7 @@ function App() {
                   onClick={() =>
                     window.open(
                       "https://github.com/AldairBroncano/PROYECTO_SER_WEB",
-                      "_blank"
+                      "_blank",
                     )
                   }
                 >
@@ -524,8 +526,47 @@ function App() {
                   onClick={() =>
                     window.open(
                       "https://github.com/AldairBroncano/PROYECTO_SER_WEB",
-                      "_blank"
+                      "_blank",
                     )
+                  }
+                >
+                  Live Demo
+                </button>
+              </div>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.4 }}
+              transition={{ duration: 0.4 }}
+              className="details-container color-container"
+            >
+              <div className="article-container">
+                <img
+                  src="./images/project-5.png"
+                  alt="Project 3"
+                  className="project-img"
+                />
+              </div>
+              <h2 className="experience-sub-title project-title">
+                Financiera Juan
+              </h2>
+              <div className="btn-container">
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/AldairBroncano/FinancieraJuan",
+                      "_blank",
+                    )
+                  }
+                >
+                  Github
+                </button>
+                <button
+                  className="btn btn-color-2 project-btn"
+                  onClick={() =>
+                    window.open("https://financierajuan.netlify.app", "_blank")
                   }
                 >
                   Live Demo
