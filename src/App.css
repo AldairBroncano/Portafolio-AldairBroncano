@@ -10,7 +10,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 /* Tema claro */
@@ -127,6 +129,26 @@ a:hover {
 
 .logo:hover {
   cursor: default;
+}
+
+/* Cursor*/
+
+.cursor {
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* HAMBURGER MENU */
@@ -454,7 +476,9 @@ article .icon {
   padding: 1rem;
   border-radius: 1.5rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .color-container {

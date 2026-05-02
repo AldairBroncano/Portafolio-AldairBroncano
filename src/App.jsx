@@ -44,6 +44,43 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // roles
+  const roles = [
+    "Java Developer",
+    "Full Stack Web Developer",
+    "Microservices Developer",
+    "Spring Boot Developer",
+    "Backend Engineer",
+  ];
+
+  const [text, setText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = roles[index];
+    let speed = isDeleting ? 50 : 100;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setText(current.substring(0, text.length + 1));
+
+        if (text === current) {
+          setTimeout(() => setIsDeleting(true), 1200); // pausa antes de borrar
+        }
+      } else {
+        setText(current.substring(0, text.length - 1));
+
+        if (text === "") {
+          setIsDeleting(false);
+          setIndex((prev) => (prev + 1) % roles.length);
+        }
+      }
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, index]);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -50 }}
@@ -128,7 +165,10 @@ function App() {
 
           <h1 className="title">Aldair Broncano</h1>
 
-          <p className="section__text__p1">Java Developer</p>
+          <p className="section__text__p1">
+            {text}
+            <span className="cursor">|</span>
+          </p>
 
           <div className="btn-container">
             <button
